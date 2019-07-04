@@ -92,6 +92,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('delivery','DeliveryController@index')->name('delivery');
     Route::get('delivery/today','DeliveryController@today')->name('delivery.today');
     Route::post('delivery/add','DeliveryController@create')->name('delivery.add');
+    Route::post('delivery/add/add','DeliveryController@create')->name('delivery.add');
     Route::get('delivery/addin','DeliveryController@find')->name('delivery.addin');
     Route::get('delivery/{delivery}', 'DeliveryController@show')->name('delivery.show');
     Route::post('searchBook', 'DeliveryController@searchBook')->name('delivery.searchBook');

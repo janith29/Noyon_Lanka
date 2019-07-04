@@ -11,12 +11,13 @@
             table.first {
                 color: #fcfcfc;
                 font-family: helvetica;
-                font-size: 8pt;
+                font-size: 6pt;
                 border-left: 3px solid rgb(243, 243, 243);
-                border-right: 3px solid rgb(236, 233, 236);
-                border-top: 3px solid rgb(230, 236, 230);
+                border-right: 1px solid rgb(236, 233, 236);
+                border-top: 1px solid rgb(230, 236, 230);
                 border-bottom: 3px solid rgb(255, 252, 252);
                 background-color: #ccffcc;
+                
             }
             td {
                 background-color: #000000;
@@ -58,18 +59,17 @@
                   $Did=$delivered->id;
                   $inveID=null;
                   $deliveredinves = DB::table('deliveredinve')->where('deliID', $Did)->get();
-                   DB::table('delivered')
-                    ->where('id', $delivered->id)
-                    ->update(['print' => true]);
+                //    DB::table('delivered')
+                    // ->where('id', $delivered->id)
+                    // ->update(['print' => true]);
                   ?>
                   
                  
                      
-                     <table class="first">
+                     <table class="first" >
                         <tr>
-                                <td width="200" align="center"><b>
+                                <td width="100" height="115"><b>
                             <?php $__currentLoopData = $deliveredinves; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deliveredinve): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            
                             <?php
 
                                 $inveID=$deliveredinve->inveID;
@@ -80,16 +80,27 @@
                                 $color=$inverty->color;
                               }
                             ?>
-                                 <h3>articleNo:- <?php echo e($articleNo); ?> -<?php echo e($color); ?></h3>
+                                <h3>articleNo:- <?php echo e($articleNo); ?> </h3>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </b></td>
-                         <td width="5" align="center"><b>XXXX</b></td>
-                         <td width="5" align="center"><b>XXXX</b></td>
+                        <td width="60" ><b>
+                            <?php $__currentLoopData = $deliveredinves; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deliveredinve): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php
+
+                                $inveID=$deliveredinve->inveID;
+                                $invertys = DB::table('inverty')->where('id', $inveID)->get();
+                            foreach($invertys as $inverty)
+                            {
+                                $articleNo=$inverty->articleNo;
+                                $color=$inverty->color;
+                              }
+                            ?>
+                                <h3>- <?php echo e($color); ?></h3>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </b></td>
                         </tr>
                         <tr>
-                           <td width="5" align="center"></td>
-                           <td width="200" align="center" ><br><br><br><br><br><b><h3><?php echo e($refkey); ?></h3></b></td>
-                           <td width="5" align="center"></td>
+                           <td width="160" ><b><h3><?php echo e($refkey); ?></h3></b></td>
                           </tr>
                        </table>
                        <br>

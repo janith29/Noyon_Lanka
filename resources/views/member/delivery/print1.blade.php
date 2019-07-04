@@ -11,12 +11,13 @@
             table.first {
                 color: #fcfcfc;
                 font-family: helvetica;
-                font-size: 8pt;
+                font-size: 6pt;
                 border-left: 3px solid rgb(243, 243, 243);
-                border-right: 3px solid rgb(236, 233, 236);
-                border-top: 3px solid rgb(230, 236, 230);
+                border-right: 1px solid rgb(236, 233, 236);
+                border-top: 1px solid rgb(230, 236, 230);
                 border-bottom: 3px solid rgb(255, 252, 252);
                 background-color: #ccffcc;
+                
             }
             td {
                 background-color: #000000;
@@ -65,11 +66,10 @@
                   
                  
                      
-                     <table class="first">
+                     <table class="first" >
                         <tr>
-                                <td width="200" align="center"><b>
+                                <td width="100" height="115"><b>
                             @foreach ($deliveredinves as $deliveredinve)
-                            
                             @php
 
                                 $inveID=$deliveredinve->inveID;
@@ -80,16 +80,27 @@
                                 $color=$inverty->color;
                               }
                             @endphp
-                                 <h3>articleNo:- {{$articleNo}} -{{$color}}</h3>
+                                <h3>articleNo:- {{$articleNo}} </h3>
                             @endforeach
                         </b></td>
-                         <td width="5" align="center"><b>XXXX</b></td>
-                         <td width="5" align="center"><b>XXXX</b></td>
+                        <td width="60" ><b>
+                            @foreach ($deliveredinves as $deliveredinve)
+                            @php
+
+                                $inveID=$deliveredinve->inveID;
+                                $invertys = DB::table('inverty')->where('id', $inveID)->get();
+                            foreach($invertys as $inverty)
+                            {
+                                $articleNo=$inverty->articleNo;
+                                $color=$inverty->color;
+                              }
+                            @endphp
+                                <h3>- {{$color}}</h3>
+                            @endforeach
+                        </b></td>
                         </tr>
                         <tr>
-                           <td width="5" align="center"></td>
-                           <td width="200" align="center" ><br><br><br><br><br><b><h3>{{$refkey}}</h3></b></td>
-                           <td width="5" align="center"></td>
+                           <td width="160" ><b><h3>{{$refkey}}</h3></b></td>
                           </tr>
                        </table>
                        <br>

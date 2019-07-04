@@ -97,7 +97,7 @@ class DeliveryController extends Controller
         $html = $view->render();
         $pdf = new PDF();
         $pdf::SetTitle('Print');
-        $pdf::AddPage('P', 'A4');
+        $pdf::AddPage('P', 'A5');
         $pdf::writeHTML($html, true, false, true, false, '');
         $pdf::Output($Issue.'_print.pdf');
         
