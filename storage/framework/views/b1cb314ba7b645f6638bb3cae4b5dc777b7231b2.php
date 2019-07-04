@@ -22,8 +22,25 @@
     <div class="row">
         <table  class="table table-striped table-bordered dt-responsive nowrap"  cellspacing="0" width="100%" border="0">
             <thead>
-            
-                                 
+         <tr>
+                    <div class="demptable">
+                      
+                <div class="right-searchbar">
+                                <!-- Search form -->
+                                <form action="searchInverty" method="post" class="form-inline">
+                                        <?php echo e(csrf_field()); ?>
+
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" style="margin-top: -10px;" type="submit">Search</button>
+                                    </div>
+                                    
+                              </form>
+                            </div>
+                        
+                    </div> 
 
                     
             </tr>

@@ -34,6 +34,22 @@
                                     </a>
                                 </td>
                             </tr>
+                            <tr>
+                                <th>Request by</th>
+                                <td>
+                                        <?php echo e($Delivery->referenceby); ?>
+
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Remark</th>
+                                <td>
+                                        <?php echo e($Delivery->premark); ?>
+
+                                    </a>
+                                </td>
+                            </tr>
                 
 <?php
         use Illuminate\Support\Facades\DB;

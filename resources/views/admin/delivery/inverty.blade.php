@@ -24,7 +24,7 @@
     <div class="row">
         <table  class="table table-striped table-bordered dt-responsive nowrap"  cellspacing="0" width="100%" border="0">
             <thead>
-            {{-- <tr>
+         <tr>
                     <div class="demptable">
                       
                 <div class="right-searchbar">
@@ -38,10 +38,10 @@
                                         <button class="btn btn-primary" style="margin-top: -10px;" type="submit">Search</button>
                                     </div>
                                     {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
-                                {{-- </form>
+                              </form>
                             </div>
                         
-                    </div> --}} 
+                    </div> 
 
                     
             </tr>

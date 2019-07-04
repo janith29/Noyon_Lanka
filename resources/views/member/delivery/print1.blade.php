@@ -48,9 +48,9 @@
                  @endphp
                  @if ($delivereds==null)
                     
-                 <div class="alert alert-danger">
-                        <strong>Not print yet!</strong> 
-                      </div>
+                <div class="alert alert-danger">
+                    <strong>Not print yet!</strong> 
+                </div>
                  @endif
                   @foreach ($delivereds as $delivered)
                   @php
@@ -62,15 +62,27 @@
                     ->where('id', $delivered->id)
                     ->update(['print' => true]);
                   @endphp
-                  @foreach($deliveredinves as $deliveredinve)
-                  @php
-                       $inveID=$deliveredinve->inveID;
-                       $invertys = DB::table('inverty')->where('id', $inveID)->get();
-                  @endphp
-                     @foreach ($invertys as $inverty)
+                  
+                 
+                     
                      <table class="first">
                         <tr>
-                         <td width="200" align="center"><b><h3>articleNo:- {{$inverty->articleNo}} -{{$inverty->color}}</h3></b></td>
+                                <td width="200" align="center"><b>
+                            @foreach ($deliveredinves as $deliveredinve)
+                            
+                            @php
+
+                                $inveID=$deliveredinve->inveID;
+                                $invertys = DB::table('inverty')->where('id', $inveID)->get();
+                            foreach($invertys as $inverty)
+                            {
+                                $articleNo=$inverty->articleNo;
+                                $color=$inverty->color;
+                              }
+                            @endphp
+                                 <h3>articleNo:- {{$articleNo}} -{{$color}}</h3>
+                            @endforeach
+                        </b></td>
                          <td width="5" align="center"><b>XXXX</b></td>
                          <td width="5" align="center"><b>XXXX</b></td>
                         </tr>
@@ -82,9 +94,7 @@
                        </table>
                        <br>
                          <br>
-                     @endforeach
                   @endforeach
-                @endforeach
                           
                   </body>
           </html>

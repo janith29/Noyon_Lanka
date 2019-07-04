@@ -82,11 +82,11 @@
             </div>
         </div>
         <div class="form-group">
-                <label for="referenceby">Reference by*</label>
+                <label for="referenceby">Request by*</label>
                 <input type="text" name="referenceby" class="form-control" id="referenceby" value="{{ old('referenceby') }}" placeholder="Reference by" required>
         </div>
         <div class="form-group">
-            <label for="premark">Premark (optional)</label>
+            <label for="premark">Remark (optional)</label>
             <textarea class="form-control" name="premark" id="premark" cols="20" rows="05" placeholder="Premark">{{ old('premark') }}</textarea>
         </div>
          <input type="hidden" name="issue_date" id="issue_date" value="{{ $Issue }}" >

@@ -62,18 +62,18 @@ class InvertyController extends Controller
     {
          $invertys = DB::table('inverty')->where('articleNo', $request['articleNo'])->get();
            
-        $ArticleNo="panding";
-        foreach($invertys as $inverty)
-        {
-            $ArticleNo=$inverty->articleNo;
-        }
+        // $ArticleNo="panding";
+        // foreach($invertys as $inverty)
+        // {
+        //     $ArticleNo=$inverty->articleNo;
+        // }
         
-        if($ArticleNo==$request['articleNo'])
-        {
-            $message = 'This Article No is use. Article No is '.$ArticleNo;
-            return redirect()->back()->with('message', $message);
+        // if($ArticleNo==$request['articleNo'])
+        // {
+        //     $message = 'This Article No is use. Article No is '.$ArticleNo;
+        //     return redirect()->back()->with('message', $message);
                
-        }
+        // }
         $validatedData = [
             'articleNo' => 'required',
             'quantity' => 'required|regex:/^[0-9]+(\.[0-9][0-9][0-9][0-9]?)?$/',

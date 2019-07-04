@@ -100,7 +100,7 @@ class DeliveryController extends Controller
         $premark=null;
         if($request->get('premark')==null)
         {
-            $premark="No premark";
+            $premark="No Remark";
         }
         else{
             $premark=$request->get('premark');
