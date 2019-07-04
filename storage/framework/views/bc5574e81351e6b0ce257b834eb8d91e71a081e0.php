@@ -66,6 +66,7 @@
                         <th>ID</th>
                         <th>Reference key</th>
                         <th>Request date</th>
+                        <th>Request by</th>
                         <th>Issue date</th>
                         <th>Option</th>
                     </tr>
@@ -76,6 +77,7 @@
                                 <td><?php echo e($Deliver->id); ?></td>
                                 <td><?php echo e($Deliver->refkey); ?></td>
                                 <td><?php echo e($Deliver->reqdate); ?></td>
+                                <td><?php echo e($Deliver->referenceby); ?></td>
                                 <td><?php echo e($Deliver->issudate); ?></td>
                                 <td> <a class="btn btn-xs btn-primary" href="<?php echo e(route('admin.delivery.show',[$Deliver->id])); ?>">
                                     <i class="fa fa-eye"></i>

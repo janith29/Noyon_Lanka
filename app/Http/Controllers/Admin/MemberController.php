@@ -142,7 +142,7 @@ class MemberController extends Controller
                 'password' => bcrypt($request->get('nic')),
                 'confirmation_code' => Uuid::uuid4(),
                 'confirmed' => true,
-                'usertype' => 'Patient'
+                'usertype' => 'member'
                 ]);
     
                 // assign the role to a user role.

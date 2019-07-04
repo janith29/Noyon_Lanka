@@ -50,7 +50,7 @@ http://www.tooplate.com/view/2090-kinetic
 				   <?php else: ?>
 					   <?php if(auth()->user()->usertype == 'administrator'): ?>
 					   <li> <a href="<?php echo e(url('/admin')); ?>"><span class="icon fa fa-tachometer" data-toggle="tooltip" title="Dashboard!"></span></a></li>
-					   <?php elseif(auth()->user()->usertype == 'Patient'): ?>
+					   <?php elseif(auth()->user()->usertype == 'member'): ?>
 					   <li> <a href="<?php echo e(url('/member')); ?>"><span class="icon fa fa-tachometer" data-toggle="tooltip" title="Dashboard!"></span></a></li>
 					   <?php endif; ?>
 					   

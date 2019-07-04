@@ -20,7 +20,7 @@ class RolesSeeder extends Seeder
         $this->disableForeignKeys();
         $this->truncate('roles');
 
-        $roles = [['name' => 'administrator'], ['name' => 'Patient']
+        $roles = [['name' => 'administrator'], ['name' => 'member']
         ];
 
         DB::table('roles')->insert($roles);

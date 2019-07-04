@@ -50,7 +50,7 @@ http://www.tooplate.com/view/2090-kinetic
 				   @else
 					   @if(auth()->user()->usertype == 'administrator'){{--->hasRole('administrator')--}}
 					   <li> <a href="{{ url('/admin') }}"><span class="icon fa fa-tachometer" data-toggle="tooltip" title="Dashboard!"></span></a></li>
-					   @elseif(auth()->user()->usertype == 'Patient')
+					   @elseif(auth()->user()->usertype == 'member')
 					   <li> <a href="{{ url('/member') }}"><span class="icon fa fa-tachometer" data-toggle="tooltip" title="Dashboard!"></span></a></li>
 					   @endif
 					   

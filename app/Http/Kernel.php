@@ -69,6 +69,7 @@ class Kernel extends HttpKernel
         'doctor' => \App\Http\Middleware\DoctorMiddleware::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'authorize' => \App\Http\Middleware\Authorize::class,
+        'Member' => \App\Http\Middleware\MemberMiddleware::class,
         'protection' => \App\Http\Middleware\Protection::class
     ];
 }

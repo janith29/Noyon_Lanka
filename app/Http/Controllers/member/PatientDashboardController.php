@@ -21,7 +21,7 @@ class PatientDashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('patient', ['except' => 'logout']);
+        $this->middleware('Member', ['except' => 'logout']);
     }
 
     /**
@@ -44,7 +44,7 @@ class PatientDashboardController extends Controller
             }
         }
 
-        return view('member.dashboard', ['counts' => $counts]);
+        return view('member.dashboard');
     }
 
 

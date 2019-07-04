@@ -108,7 +108,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     });
 
-Route::group(['prefix' => 'member', 'as' => 'member.', 'namespace' => 'member', 'middleware' => 'patient'], function () {
+Route::group(['prefix' => 'member', 'as' => 'member.', 'namespace' => 'member', 'middleware' => 'Member'], function () {
    
     // Dashboard
     Route::get('/', 'PatientDashboardController@index')->name('dashboard');

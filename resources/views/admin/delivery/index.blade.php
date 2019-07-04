@@ -66,6 +66,7 @@
                         <th>ID</th>
                         <th>Reference key</th>
                         <th>Request date</th>
+                        <th>Request by</th>
                         <th>Issue date</th>
                         <th>Option</th>
                     </tr>
@@ -76,6 +77,7 @@
                                 <td>{{ $Deliver->id }}</td>
                                 <td>{{ $Deliver->refkey }}</td>
                                 <td>{{ $Deliver->reqdate }}</td>
+                                <td>{{ $Deliver->referenceby }}</td>
                                 <td>{{  $Deliver->issudate  }}</td>
                                 <td> <a class="btn btn-xs btn-primary" href="{{ route('admin.delivery.show',[$Deliver->id]) }}">
                                     <i class="fa fa-eye"></i>
