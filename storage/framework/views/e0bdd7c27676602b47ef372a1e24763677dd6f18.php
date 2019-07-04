@@ -88,8 +88,8 @@
 
                         </a>
                     </li>
-                    <li class="<?php if(Request::is('member/inverty/add') ||Request::is('member/inverty')||Request::is('member/searchInverty')||Request::is('member/inverty')||Request::is('admin/inverty/edit/'.$inver)||Request::is('member/inverty/'.$inver)): ?> active <?php endif; ?>">
-                        <a href="<?php echo e(route('member.inverty')); ?>">
+                    <li class="<?php if(Request::is('member/inventory/add') ||Request::is('member/inventory')||Request::is('member/searchInventory')||Request::is('member/inventory')||Request::is('admin/inventory/edit/'.$inver)||Request::is('member/inventory/'.$inver)): ?> active <?php endif; ?>">
+                        <a href="<?php echo e(route('member.inventory')); ?>">
                             <i class="fas fa-object-group" aria-hidden="true"></i>
                             <?php echo e("Inverty "); ?>
 

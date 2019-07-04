@@ -13,11 +13,11 @@
                 
 
                     <div class="demptable">
-                        <a href="{{ route('admin.inverty.add') }}" class="btn btn-primary">Add Item</a>
+                        <a href="{{ route('admin.inventory.add') }}" class="btn btn-primary">Add Item</a>
                        
                 <div class="right-searchbar">
                                 <!-- Search form -->
-                                <form action="searchInverty" method="post" class="form-inline">
+                                <form action="searchInventory" method="post" class="form-inline">
                                         {{ csrf_field() }}
                                     <div class="form-group">
                                         <input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search" required />
@@ -67,13 +67,13 @@
                                 <td>{{ $Inverty->collection }}</td>
                                 <td>{{  $Inverty->location  }}</td>
                                 <td>{{ $Inverty->qty }}</td>  
-                                <td> <a class="btn btn-xs btn-primary" href="{{ route('admin.inverty.show',[$Inverty->id]) }}">
+                                <td> <a class="btn btn-xs btn-primary" href="{{ route('admin.inventory.show',[$Inverty->id]) }}">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <a class="btn btn-xs btn-info" href="{{  route('admin.inverty.edit',[$Inverty->id]) }}">
+                                <a class="btn btn-xs btn-info" href="{{  route('admin.inventory.edit',[$Inverty->id]) }}">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a class="btn btn-xs btn-danger" href="{{ route('admin.inverty.delete',[$Inverty->id]) }}">
+                                <a class="btn btn-xs btn-danger" href="{{ route('admin.inventory.delete',[$Inverty->id]) }}">
                                     <i class="fa fa-trash"></i>
                                 </a></td>  
                             </tr>

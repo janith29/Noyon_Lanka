@@ -35,7 +35,7 @@
             <input type="text" class="form-control" name="quantity" id="quantity" value="{{ $inverty->qty }}">
         </div>
         <input type="hidden" id="id" name="id" value="{{ $inverty->id }}">
-        <a href="{{ route('admin.inverty') }}" class="btn btn-danger">Cancel</a>
+        <a href="{{ route('admin.inventory') }}" class="btn btn-danger">Cancel</a>
         <button type="submit" class="btn btn-primary">Update</button>
       </form>
     </div>

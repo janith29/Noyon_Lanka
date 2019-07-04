@@ -11,11 +11,11 @@
                 
 
                     <div class="demptable">
-                        <a href="<?php echo e(route('admin.inverty.add')); ?>" class="btn btn-primary">Add Item</a>
+                        <a href="<?php echo e(route('admin.inventory.add')); ?>" class="btn btn-primary">Add Item</a>
                        
                 <div class="right-searchbar">
                                 <!-- Search form -->
-                                <form action="searchInverty" method="post" class="form-inline">
+                                <form action="searchInventory" method="post" class="form-inline">
                                         <?php echo e(csrf_field()); ?>
 
                                     <div class="form-group">
@@ -66,13 +66,13 @@
                                 <td><?php echo e($Inverty->collection); ?></td>
                                 <td><?php echo e($Inverty->location); ?></td>
                                 <td><?php echo e($Inverty->qty); ?></td>  
-                                <td> <a class="btn btn-xs btn-primary" href="<?php echo e(route('admin.inverty.show',[$Inverty->id])); ?>">
+                                <td> <a class="btn btn-xs btn-primary" href="<?php echo e(route('admin.inventory.show',[$Inverty->id])); ?>">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <a class="btn btn-xs btn-info" href="<?php echo e(route('admin.inverty.edit',[$Inverty->id])); ?>">
+                                <a class="btn btn-xs btn-info" href="<?php echo e(route('admin.inventory.edit',[$Inverty->id])); ?>">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a class="btn btn-xs btn-danger" href="<?php echo e(route('admin.inverty.delete',[$Inverty->id])); ?>">
+                                <a class="btn btn-xs btn-danger" href="<?php echo e(route('admin.inventory.delete',[$Inverty->id])); ?>">
                                     <i class="fa fa-trash"></i>
                                 </a></td>  
                             </tr>

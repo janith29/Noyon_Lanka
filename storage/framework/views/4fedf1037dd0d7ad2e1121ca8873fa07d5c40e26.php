@@ -1,7 +1,6 @@
-@extends('admin.layouts.admin')
-@section('title', "Inventory Management")
+<?php $__env->startSection('title', "Inventory Management"); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="row">
         <table class="table table-striped table-hover">
             <tbody>
@@ -9,34 +8,35 @@
 
             <tr>
                 <th>Article No</th>
-                <td>{{ $inverty->articleNo }}</td>
+                <td><?php echo e($inverty->articleNo); ?></td>
             </tr>
 
             <tr>
                     <th>Color</th>
-                    <td>{{ $inverty->color}}</td>
+                    <td><?php echo e($inverty->color); ?></td>
                 </tr>
             <tr>
                     <th>Collection</th>
-                    <td>{{ $inverty->collection }}</td>
+                    <td><?php echo e($inverty->collection); ?></td>
                 </tr>
             <tr>
                 <th>Location</th>
                 <td>
-                        {{ $inverty->location }}
+                        <?php echo e($inverty->location); ?>
+
                     </a>
                 </td>
             </tr>
             <tr>
                 <th>Inventory Quantity</th>
                 <td>
-                    {{ ($inverty->qty)}} 
+                    <?php echo e(($inverty->qty)); ?> 
                 </td>
             </tr>
             </tbody>
         </table>
-        <a href="{{ route('admin.inventory') }}" class="btn btn-danger">Book home</a>
-        <a class="btn btn-info" href="{{ route('admin.inventory.edit',[$inverty->id]) }}">Edit</a>
+        <a href="<?php echo e(route('member.inventory')); ?>" class="btn btn-danger">Inventory home</a>
+       
     </div>
     <script>
             // Get the modal
@@ -61,4 +61,5 @@
             }
             </script>
             
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('member.layouts.member', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

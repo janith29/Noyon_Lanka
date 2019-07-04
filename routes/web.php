@@ -75,15 +75,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
 
     //inverty function
-    Route::get('inverty','InvertyController@index')->name('inverty');
-    Route::get('inverty/add', 'InvertyController@create')->name('inverty.add');
-    Route::post('inverty/addinverty', 'InvertyController@store')->name('inverty.addbook');
-    Route::get('inverty/{inverty}', 'InvertyController@show')->name('inverty.show');
-    Route::get('inverty/edit/{inverty}', 'InvertyController@edit')->name('inverty.edit');
-    Route::post('inverty/edit/updateinverty','InvertyController@update');
-    Route::get('inverty/delete/{inverty}', 'InvertyController@destroy')->name('inverty.delete');
-    Route::post('inverty/delete/deleteinverty','InvertyController@sedelete');
-    Route::post('searchInverty', 'InvertyController@searchInverty');
+    Route::get('inventory','InvertyController@index')->name('inventory');
+    Route::get('inventory/add', 'InvertyController@create')->name('inventory.add');
+    Route::post('inventory/addinventory', 'InvertyController@store')->name('inventory.addbook');
+    Route::get('inventory/{inverty}', 'InvertyController@show')->name('inventory.show');
+    Route::get('inventory/edit/{inverty}', 'InvertyController@edit')->name('inventory.edit');
+    Route::post('inventory/edit/updateinverty','InvertyController@update');
+    Route::get('inventory/delete/{inverty}', 'InvertyController@destroy')->name('inventory.delete');
+    Route::post('inventory/delete/deleteinventory','InvertyController@sedelete');
+    Route::post('searchInventory', 'InvertyController@searchInverty');
    
     //delivery function 
 
@@ -126,15 +126,15 @@ Route::group(['prefix' => 'member', 'as' => 'member.', 'namespace' => 'member', 
 
 
     //inverty function
-    Route::get('inverty','InvertyController@index')->name('inverty');
-    Route::get('inverty/add', 'InvertyController@create')->name('inverty.add');
-    Route::post('inverty/addinverty', 'InvertyController@store')->name('inverty.addbook');
-    Route::get('inverty/{inverty}', 'InvertyController@show')->name('inverty.show');
-    Route::get('inverty/edit/{inverty}', 'InvertyController@edit')->name('inverty.edit');
-    Route::post('inverty/edit/updateinverty','InvertyController@update');
-    Route::get('inverty/delete/{inverty}', 'InvertyController@destroy')->name('inverty.delete');
-    Route::post('inverty/delete/deleteinverty','InvertyController@sedelete');
-    Route::post('searchInverty', 'InvertyController@searchInverty');
+    Route::get('inventory','InvertyController@index')->name('inventory');
+    Route::get('inventory/add', 'InvertyController@create')->name('inventory.add');
+    Route::post('inventory/addinventory', 'InvertyController@store')->name('inventory.addbook');
+    Route::get('inventory/{inverty}', 'InvertyController@show')->name('inventory.show');
+    Route::get('inventory/edit/{inverty}', 'InvertyController@edit')->name('inventory.edit');
+    Route::post('inventory/edit/updateinverty','InvertyController@update');
+    Route::get('inventory/delete/{inverty}', 'InvertyController@destroy')->name('inventory.delete');
+    Route::post('inventory/delete/deleteinverty','InvertyController@sedelete');
+    Route::post('searchInventory', 'InvertyController@searchInverty');
    
     //delivery function 
 

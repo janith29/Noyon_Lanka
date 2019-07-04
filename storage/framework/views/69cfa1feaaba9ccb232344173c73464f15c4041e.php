@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-<form action="addinverty" method="post" enctype="multipart/form-data">
+<form action="addinventory" method="post" enctype="multipart/form-data">
 <?php echo e(csrf_field()); ?>
 
 
@@ -40,8 +40,8 @@
             <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Quantity" value="<?php echo e(old('quantity')); ?>">
         </div>
        
-        <a href="<?php echo e(route('admin.inverty')); ?>" class="btn btn-danger">Cancel</a>
-        <a href="<?php echo e(route('admin.inverty.add')); ?>" class="btn btn-primary">Clear</a>
+        <a href="<?php echo e(route('admin.inventory')); ?>" class="btn btn-danger">Cancel</a>
+        <a href="<?php echo e(route('admin.inventory.add')); ?>" class="btn btn-primary">Clear</a>
         <button type="submit" class="btn btn-primary">Add</button>
       </form>
     </div>

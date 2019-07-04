@@ -76,14 +76,14 @@ class InvertyController extends Controller
         // }
         $validatedData = [
             'articleNo' => 'required',
-            'quantity' => 'required|regex:/^[0-9]+(\.[0-9][0-9][0-9][0-9]?)?$/',
+            'quantity' => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
             'color' => 'required',
             'collection' => 'required',
             'location' => 'required'
         ];
         $customMessages = [
             'articleNo.required' => 'Article No must be required',
-            'quantity.regex' => 'Inverty quantity must be double value(with 4)',
+            'quantity.regex' => 'Inverty quantity must be double value(with 2)',
             'color.required' =>  'Inverty color must be required',
             'collection.required' =>  'Inverty collection must be required',
             'location.required' =>  'Inverty location must be required'
@@ -133,13 +133,13 @@ class InvertyController extends Controller
     {
 
         $validatedData = [
-            'quantity' => 'required|regex:/^[0-9]+(\.[0-9][0-9][0-9][0-9]?)?$/',
+            'quantity' => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
             'color' => 'required',
             'collection' => 'required',
             'location' => 'required'
         ];
         $customMessages = [
-            'quantity.regex' => 'Inverty quantity must be double value(with 4)',
+            'quantity.regex' => 'Inverty quantity must be double value(with 2)',
             'color.required' =>  'Inverty color must be required',
             'collection.required' =>  'Inverty collection must be required',
             'location.required' =>  'Inverty location must be required'

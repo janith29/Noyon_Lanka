@@ -48,9 +48,9 @@
                  ?>
                  <?php if($delivereds==null): ?>
                     
-                 <div class="alert alert-danger">
-                        <strong>Not print yet!</strong> 
-                      </div>
+                <div class="alert alert-danger">
+                    <strong>Not print yet!</strong> 
+                </div>
                  <?php endif; ?>
                   <?php $__currentLoopData = $delivereds; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $delivered): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <?php
@@ -62,15 +62,27 @@
                     ->where('id', $delivered->id)
                     ->update(['print' => true]);
                   ?>
-                  <?php $__currentLoopData = $deliveredinves; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deliveredinve): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                  <?php
-                       $inveID=$deliveredinve->inveID;
-                       $invertys = DB::table('inverty')->where('id', $inveID)->get();
-                  ?>
-                     <?php $__currentLoopData = $invertys; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $inverty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  
+                 
+                     
                      <table class="first">
                         <tr>
-                         <td width="200" align="center"><b><h3>articleNo:- <?php echo e($inverty->articleNo); ?> -<?php echo e($inverty->color); ?></h3></b></td>
+                                <td width="200" align="center"><b>
+                            <?php $__currentLoopData = $deliveredinves; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deliveredinve): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            
+                            <?php
+
+                                $inveID=$deliveredinve->inveID;
+                                $invertys = DB::table('inverty')->where('id', $inveID)->get();
+                            foreach($invertys as $inverty)
+                            {
+                                $articleNo=$inverty->articleNo;
+                                $color=$inverty->color;
+                              }
+                            ?>
+                                 <h3>articleNo:- <?php echo e($articleNo); ?> -<?php echo e($color); ?></h3>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </b></td>
                          <td width="5" align="center"><b>XXXX</b></td>
                          <td width="5" align="center"><b>XXXX</b></td>
                         </tr>
@@ -82,9 +94,7 @@
                        </table>
                        <br>
                          <br>
-                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                           
                   </body>
           </html>

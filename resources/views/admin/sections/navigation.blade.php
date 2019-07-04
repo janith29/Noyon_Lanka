@@ -94,8 +94,8 @@
                             {{ "Member" }}
                         </a>
                     </li>
-                    <li class="@if (Request::is('admin/inverty/add') ||Request::is('admin/inverty')||Request::is('admin/searchInverty')||Request::is('admin/inverty')||Request::is('admin/inverty/edit/'.$inver)||Request::is('admin/inverty/'.$inver)) active @endif">
-                        <a href="{{ route('admin.inverty') }}">
+                    <li class="@if (Request::is('admin/inventory/add') ||Request::is('admin/inventory')||Request::is('admin/searchInventory')||Request::is('admin/inventory')||Request::is('admin/inventory/edit/'.$inver)||Request::is('admin/inventory/'.$inver)) active @endif">
+                        <a href="{{ route('admin.inventory') }}">
                             <i class="fas fa-object-group" aria-hidden="true"></i>
                             {{ "Inventory " }}
                         </a>

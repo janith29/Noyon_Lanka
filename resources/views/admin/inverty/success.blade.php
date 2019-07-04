@@ -18,7 +18,7 @@
                             <p>Success done your job Inventory</p>
                         </div>
                         <div class="modal-footer">
-                        <a href="/admin/inverty" class="btn btn-primary">Ok</a>
+                        <a href="/admin/inventory" class="btn btn-primary">Ok</a>
                         </div>
                     </div>
                 </div>

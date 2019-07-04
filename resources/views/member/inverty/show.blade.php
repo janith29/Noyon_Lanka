@@ -1,5 +1,5 @@
 @extends('member.layouts.member')
-@section('title', "Inverty Management")
+@section('title', "Inventory Management")
 
 @section('content')
     <div class="row">
@@ -35,7 +35,7 @@
             </tr>
             </tbody>
         </table>
-        <a href="{{ route('member.inverty') }}" class="btn btn-danger">Inventory home</a>
+        <a href="{{ route('member.inventory') }}" class="btn btn-danger">Inventory home</a>
        
     </div>
     <script>

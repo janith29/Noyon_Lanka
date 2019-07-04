@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-<form action="addinverty" method="post" enctype="multipart/form-data">
+<form action="addinventory" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 
         @if ($errors->any())
@@ -41,8 +41,8 @@
             <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Quantity" value="{{ old('quantity') }}">
         </div>
        
-        <a href="{{ route('admin.inverty') }}" class="btn btn-danger">Cancel</a>
-        <a href="{{ route('admin.inverty.add') }}" class="btn btn-primary">Clear</a>
+        <a href="{{ route('admin.inventory') }}" class="btn btn-danger">Cancel</a>
+        <a href="{{ route('admin.inventory.add') }}" class="btn btn-primary">Clear</a>
         <button type="submit" class="btn btn-primary">Add</button>
       </form>
     </div>
