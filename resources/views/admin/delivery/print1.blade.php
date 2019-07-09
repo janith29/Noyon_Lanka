@@ -12,12 +12,6 @@
                 color: #fcfcfc;
                 font-family: helvetica;
                 font-size: 6pt;
-                border-left: 3px solid rgb(243, 243, 243);
-                border-right: 1px solid rgb(236, 233, 236);
-                border-top: 1px solid rgb(230, 236, 230);
-                border-bottom: 3px solid rgb(255, 252, 252);
-                background-color: #ccffcc;
-                
             }
             td {
                 background-color: #000000;
@@ -68,7 +62,7 @@
                      
                      <table class="first" >
                         <tr>
-                                <td width="100" height="115"><b>
+                                <td width="90" height="115"><b>
                             @foreach ($deliveredinves as $deliveredinve)
                             @php
 
@@ -80,10 +74,10 @@
                                 $color=$inverty->color;
                               }
                             @endphp
-                                <h3>articleNo:- {{$articleNo}} </h3>
+                                <h3>articleNo:-{{$articleNo}} </h3>
                             @endforeach
                         </b></td>
-                        <td width="60" ><b>
+                        <td width="80" ><b>
                             @foreach ($deliveredinves as $deliveredinve)
                             @php
 
@@ -95,12 +89,12 @@
                                 $color=$inverty->color;
                               }
                             @endphp
-                                <h3>- {{$color}}</h3>
+                                <h3>-{{$color}}</h3>
                             @endforeach
                         </b></td>
                         </tr>
                         <tr>
-                           <td width="160" ><b><h3>{{$refkey}}</h3></b></td>
+                           <td width="170" ><b><h3>{{$refkey}}</h3></b></td>
                           </tr>
                        </table>
                        <br>

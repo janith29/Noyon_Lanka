@@ -12,12 +12,6 @@
                 color: #fcfcfc;
                 font-family: helvetica;
                 font-size: 6pt;
-                border-left: 3px solid rgb(243, 243, 243);
-                border-right: 1px solid rgb(236, 233, 236);
-                border-top: 1px solid rgb(230, 236, 230);
-                border-bottom: 3px solid rgb(255, 252, 252);
-                background-color: #ccffcc;
-                
             }
             td {
                 background-color: #000000;
@@ -60,15 +54,15 @@
                   $inveID=null;
                   $deliveredinves = DB::table('deliveredinve')->where('deliID', $Did)->get();
                 //    DB::table('delivered')
-                    // ->where('id', $delivered->id)
-                    // ->update(['print' => true]);
+                //     ->where('id', $delivered->id)
+                //     ->update(['print' => true]);
                   ?>
                   
                  
                      
                      <table class="first" >
                         <tr>
-                                <td width="100" height="115"><b>
+                                <td width="90" height="115"><b>
                             <?php $__currentLoopData = $deliveredinves; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deliveredinve): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <?php
 
@@ -80,10 +74,10 @@
                                 $color=$inverty->color;
                               }
                             ?>
-                                <h3>articleNo:- <?php echo e($articleNo); ?> </h3>
+                                <h3>articleNo:-<?php echo e($articleNo); ?> </h3>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </b></td>
-                        <td width="60" ><b>
+                        <td width="80" ><b>
                             <?php $__currentLoopData = $deliveredinves; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deliveredinve): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <?php
 
@@ -95,12 +89,12 @@
                                 $color=$inverty->color;
                               }
                             ?>
-                                <h3>- <?php echo e($color); ?></h3>
+                                <h3>-<?php echo e($color); ?></h3>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </b></td>
                         </tr>
                         <tr>
-                           <td width="160" ><b><h3><?php echo e($refkey); ?></h3></b></td>
+                           <td width="170" ><b><h3><?php echo e($refkey); ?></h3></b></td>
                           </tr>
                        </table>
                        <br>

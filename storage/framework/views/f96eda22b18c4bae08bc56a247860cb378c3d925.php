@@ -7,6 +7,7 @@
     <div class="row">
         <table  class="table table-striped table-bordered dt-responsive nowrap"  cellspacing="0" width="100%" border="0">
             <thead>
+                
             <tr>
                 
 
@@ -20,7 +21,10 @@
                             <a href="<?php echo e(route('admin.delivery.print')); ?>" class="btn btn-primary">Print Today Delivery</a>
                            
                             <a href="<?php echo e(route('admin.delivery.today')); ?>" class="btn btn-primary">Show Today Delivery</a>
+
+                        <h3>Select delivery <?php echo e($count = count($Delivers)); ?> </h3>
                             </div>
+
 
                     
             </tr>

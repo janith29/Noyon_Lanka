@@ -21,7 +21,8 @@
                             <a href="{{ route('member.delivery.print') }}" class="btn btn-primary">Print Today Delivery</a>
                            
                             <a href="{{ route('member.delivery.today') }}" class="btn btn-primary">Show Today Delivery</a>
-                            </div>
+                            <h3>Total deliveries {{$count = count($Delivers)}} </h3>
+                        </div>
 
                     
             </tr>

@@ -41,6 +41,20 @@
                                 </div>
                                 {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
                             </form>
+                            <form action="Selectrange" method="post" class="form-inline">
+                                {{ csrf_field() }}
+                            <div class="form-group">
+                                    <div class="form-group">
+                                            <input type="date" name="todate" class="form-control" required/>
+                                        </div>  <div class="form-group">
+                                            <input type="date" name="fromdate" class="form-control" required/>
+                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" style="margin-top: -10px;" type="submit">Show range date Delivery</button>
+                            </div>
+                            {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
+                        </form>
                  
                     </div>
 

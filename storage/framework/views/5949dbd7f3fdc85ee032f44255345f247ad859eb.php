@@ -82,11 +82,11 @@
         </div>
         <div class="form-group">
                 <label for="referenceby">Request by*</label>
-                <input type="text" name="referenceby" class="form-control" id="referenceby" value="<?php echo e(old('referenceby')); ?>" placeholder="Reference by" required>
+                <input type="text" name="referenceby" class="form-control" id="referenceby" value="<?php echo e(old('referenceby')); ?>" placeholder="Request by" required>
         </div>
         <div class="form-group">
             <label for="premark">Remark (optional)</label>
-            <textarea class="form-control" name="premark" id="premark" cols="20" rows="05" placeholder="Premark"><?php echo e(old('premark')); ?></textarea>
+            <textarea class="form-control" name="Remark" id="premark" cols="20" rows="05" placeholder="Premark"><?php echo e(old('premark')); ?></textarea>
         </div>
          <input type="hidden" name="issue_date" id="issue_date" value="<?php echo e($Issue); ?>" >
         <input type="hidden" name="refkey" id="refkey" value="<?php echo e($refkey); ?>" >

@@ -66,7 +66,7 @@
     
                 <tr>
                         <th>Color</th>
-                        <td>{{ $location}}</td>
+                        <td>{{ $color}}</td>
                     </tr>
                 <tr>
                         <th>Collection</th>

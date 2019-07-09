@@ -9,6 +9,7 @@
     <div class="row">
         <table  class="table table-striped table-bordered dt-responsive nowrap"  cellspacing="0" width="100%" border="0">
             <thead>
+                
             <tr>
                 
 
@@ -22,7 +23,10 @@
                             <a href="{{ route('admin.delivery.print') }}" class="btn btn-primary">Print Today Delivery</a>
                            
                             <a href="{{ route('admin.delivery.today') }}" class="btn btn-primary">Show Today Delivery</a>
+
+                        <h3>Total deliveries {{$count = count($Delivers)}} </h3>
                             </div>
+
 
                     
             </tr>

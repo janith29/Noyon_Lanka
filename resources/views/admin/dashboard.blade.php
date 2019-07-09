@@ -24,7 +24,7 @@
         </div>
         
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <span class="count_top"><i class="fas fa-object-group"></i>Total Inverty</span>
+            <span class="count_top"><i class="fas fa-object-group"></i>Total Inventory</span>
             <div class="count green">{{ $counts['inverty'] }}</div>
         </div>
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">

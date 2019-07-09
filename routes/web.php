@@ -106,6 +106,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('searchdelivery', 'DeliveryController@searchdelivery');
 
     Route::post('Selectdate', 'DeliveryController@Selectdate');
+    Route::post('Selectrange', 'DeliveryController@Selectrange');
 
     });
 
@@ -159,6 +160,8 @@ Route::group(['prefix' => 'member', 'as' => 'member.', 'namespace' => 'member', 
     Route::post('searchtoday', 'DeliveryController@searchtoday');
     
     Route::post('Selectdate', 'DeliveryController@Selectdate');
+
+    Route::post('Selectrange', 'DeliveryController@Selectrange');
    
 });
 

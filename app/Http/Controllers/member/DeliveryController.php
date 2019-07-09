@@ -62,7 +62,16 @@ class DeliveryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
- 
+    public function Selectrange(Request $request)
+    {
+       
+        $todate=$request->get('todate');
+        $fromdate=$request->get('fromdate');
+
+        $Delivers =  DB::select("SELECT * FROM `delivered` WHERE DATE(issudate) BETWEEN ' $todate' AND ' $fromdate'");
+       
+        return view('admin.delivery.select', compact('Delivers'));
+    }
     /** 
      * Store a newly created resource in storage.
      *
