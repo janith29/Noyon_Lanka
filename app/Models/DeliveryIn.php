@@ -11,6 +11,6 @@ class DeliveryIn extends Model
 
     protected $primarykey = 'id';
     protected $fillable = [
-        'id','deliveredinve','deliID'
+        'id','deliveredinve','deliID','accd'
     ];
 }

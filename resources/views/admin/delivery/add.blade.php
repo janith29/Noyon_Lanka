@@ -50,6 +50,7 @@
         @for ($i = 0; $i < $count; $i++)
             @php
              $IDin=$request[$i];
+        
              $invertys = DB::table('inverty')->where('id', $IDin)->get();
              foreach($invertys as $inverty)
                 {
@@ -58,6 +59,14 @@
                 }
             @endphp
                 <h2>{{$articleNoDelvery}}</h2>
+                <select class="form-control" style="width: 100px;" name="parity[]">
+                    <option class="form-control"  disabled value="">Select</option>
+
+        @for ($x = 0; $x < $count; $x++)
+                    <option class="form-control"  value="{{$x+1}}">{{$x+1}}</option>
+
+        @endfor
+                  </select>
                 <input type="hidden" name="IDinve[]" id="IDinve" value="{{ $IDinve }}" >
        
         @endfor

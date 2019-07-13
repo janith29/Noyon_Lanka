@@ -49,6 +49,7 @@
         <?php for($i = 0; $i < $count; $i++): ?>
             <?php
              $IDin=$request[$i];
+             
              $invertys = DB::table('inverty')->where('id', $IDin)->get();
              foreach($invertys as $inverty)
                 {
@@ -57,6 +58,14 @@
                 }
             ?>
                 <h2><?php echo e($articleNoDelvery); ?></h2>
+                <select class="form-control" style="width: 100px;" name="parity[]">
+                    <option class="form-control"  disabled value="">Select</option>
+
+        <?php for($x = 0; $x < $count; $x++): ?>
+                    <option class="form-control"  value="<?php echo e($x+1); ?>"><?php echo e($x+1); ?></option>
+
+        <?php endfor; ?>
+                  </select>
                 <input type="hidden" name="IDinve[]" id="IDinve" value="<?php echo e($IDinve); ?>" >
        
         <?php endfor; ?>

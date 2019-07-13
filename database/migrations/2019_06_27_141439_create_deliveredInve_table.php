@@ -17,6 +17,7 @@ class CreateDeliveredInveTable extends Migration
             $table->increments('id');
             $table->string('inveID');
             $table->string('deliID');
+            $table->string('accd');
             $table->timestamps();
         });
     }

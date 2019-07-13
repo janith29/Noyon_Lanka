@@ -125,6 +125,7 @@ class DeliveryController extends Controller
         $Delivery->save();
 
         $count=count($request->get('IDinve'));
+        $parity=$request->get('parity');
         $inventDE=$request->get('IDinve');
         $deliveres = DB::select('select * from delivered ORDER BY id DESC LIMIT 1');
         
@@ -136,10 +137,11 @@ class DeliveryController extends Controller
         for ($i = 0; $i < $count; $i++)
         {
             $IDin=$inventDE[$i];
+            $acc=$parity[$i];
 
             $Issue=Carbon::now();
             DB::table('deliveredinve')->insert(
-                ['inveID' => $IDin, 'deliID' => $lastid, 'created_at' => $Issue, 'updated_at' => $Issue]
+                ['inveID' => $IDin, 'deliID' => $lastid, 'accd' => $acc, 'created_at' => $Issue, 'updated_at' => $Issue]
             );
 
             $invertys = DB::table('inverty')->where('id', $IDin)->get();
