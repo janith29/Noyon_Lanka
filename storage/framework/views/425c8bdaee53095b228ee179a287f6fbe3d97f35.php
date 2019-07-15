@@ -53,9 +53,9 @@
                   $Did=$delivered->id;
                   $inveID=null;
                   $deliveredinves =   DB::table('deliveredinve')->where('deliID', $Did)->orderBy('accd', 'ASC')->get();
-                //    DB::table('delivered')
-                //     ->where('id', $delivered->id)
-                //     ->update(['print' => true]);
+                   DB::table('delivered')
+                    ->where('id', $delivered->id)
+                    ->update(['print' => true]);
                   ?>
                   
                  

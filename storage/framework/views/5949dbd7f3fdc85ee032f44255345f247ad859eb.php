@@ -45,19 +45,24 @@
 
         
 <div class="form-group">
-        <label for="articleNo">Article No *</label>
         <?php for($i = 0; $i < $count; $i++): ?>
             <?php
              $IDin=$request[$i];
-             
+        
              $invertys = DB::table('inverty')->where('id', $IDin)->get();
              foreach($invertys as $inverty)
                 {
                     $articleNoDelvery=$inverty->articleNo;
                     $IDinve=$inverty->id;
+                    $color=$inverty->color;
                 }
             ?>
-                <h2><?php echo e($articleNoDelvery); ?></h2>
+
+        <label for="articleNo">Article No </label>
+        <h2><?php echo e($articleNoDelvery); ?></h2>
+        
+        <label for="articleNo">Colour </label>
+        <h2><?php echo e($color); ?></h2>
                 <select class="form-control" style="width: 100px;" name="parity[]">
                     <option class="form-control"  disabled value="">Select</option>
 

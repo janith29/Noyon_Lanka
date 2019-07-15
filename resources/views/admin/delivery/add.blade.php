@@ -46,7 +46,6 @@
 
         
 <div class="form-group">
-        <label for="articleNo">Article No *</label>
         @for ($i = 0; $i < $count; $i++)
             @php
              $IDin=$request[$i];
@@ -56,9 +55,15 @@
                 {
                     $articleNoDelvery=$inverty->articleNo;
                     $IDinve=$inverty->id;
+                    $color=$inverty->color;
                 }
             @endphp
-                <h2>{{$articleNoDelvery}}</h2>
+
+        <label for="articleNo">Article No </label>
+        <h2>{{$articleNoDelvery}}</h2>
+        
+        <label for="articleNo">Colour </label>
+        <h2>{{$color}}</h2>
                 <select class="form-control" style="width: 100px;" name="parity[]">
                     <option class="form-control"  disabled value="">Select</option>
 

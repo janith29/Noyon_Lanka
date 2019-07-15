@@ -17,7 +17,7 @@
     <!-- top tiles -->
     <div class="row tile_count">
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <span class="count_top"><i class="fa fa-users"></i>Total Mambers</span>
+            <span class="count_top"><i class="fa fa-users"></i>Total Members</span>
             <div class="count green"><?php echo e($counts['member']); ?></div>
         </div>
         
@@ -41,7 +41,7 @@
             <div class="x_panel">
                 <div class="row x_title">
                     <div class="col-md-6">
-                        <h3> Noyon Lanka Inverty Management System
+                        <h3> Noyon Lanka Inventory Management System
                         </h3>
                     </div>
                 </div>
